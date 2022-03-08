@@ -1,0 +1,7 @@
+{
+  "name": "Nederlandse-Huisartsen-Zorg",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
