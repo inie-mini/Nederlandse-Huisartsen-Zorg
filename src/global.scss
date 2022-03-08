@@ -31,3 +31,6 @@
   align-items: center;
   height: 100%;
 }
+ion-content {
+  --background: rgba(var(--ion-color-primary-rgb), 0.1);
+};
