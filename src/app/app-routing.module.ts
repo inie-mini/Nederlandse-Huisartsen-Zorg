@@ -5,9 +5,23 @@ const routes: Routes = [
   { path: '', redirectTo: 'loader', pathMatch: 'full' },
   { path: 'loader', loadChildren: () => import('./pages/loader/loader.module').then(m => m.LoaderPageModule) },
   { path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule) },
+  { path: 'register', loadChildren: () => import('./pages/register/register.module').then(m => m.RegisterPageModule) },
+  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
   {
-    path: 'register',
-    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+    path: 'forgot-pw',
+    loadChildren: () => import('./pages/forgot-pw/forgot-pw.module').then( m => m.ForgotPwPageModule)
+  },
+  {
+    path: 'emergency',
+    loadChildren: () => import('./pages/emergency/emergency.module').then( m => m.EmergencyPageModule)
+  },
+  {
+    path: 'emergency2',
+    loadChildren: () => import('./pages/emergency2/emergency2.module').then( m => m.Emergency2PageModule)
+  },
+  {
+    path: 'not-life-threatening',
+    loadChildren: () => import('./pages/not-life-threatening/not-life-threatening.module').then( m => m.NotLifeThreateningPageModule)
   }
 ];
 

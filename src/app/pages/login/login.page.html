@@ -1,17 +1,9 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
-<ion-content>
+<ion-content fullscreen class="ion-padding">
   <div class="flex-center">
     <ion-card>
       <ion-card-header>
-        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
         <ion-card-title color="secondary">NHZ-Login</ion-card-title>
       </ion-card-header>
-    
       <ion-card-content>
         <ion-item>
           <ion-label position="floating">Email:</ion-label>
@@ -21,11 +13,17 @@
           <ion-label position="floating">Paswoord:</ion-label>
           <ion-input type="password"></ion-input>
         </ion-item>
-        <ion-button color="dark" fill="clear" size="full">paswoord vergeten?</ion-button>
-        <ion-button expand="block" color="secondary" shape="round">Login</ion-button>
-        <ion-button expand="block" fill="clear" shape="round">Registreren</ion-button>
+        <ion-button color="dark" fill="clear" size="full" href="forgot-pw">paswoord vergeten?</ion-button>
+        <ion-button expand="block" color="secondary" shape="round" href="home">Login</ion-button>
+        <ion-button expand="block" fill="clear" shape="round" href="register">Registreren</ion-button>
       </ion-card-content>
     </ion-card>
   </div>
-
 </ion-content>
+<ion-footer >
+  <ion-toolbar >
+    <ion-button class="emergency" color="danger" expand="block" href="emergency">SPOED
+      <!-- <ion-alert-controller></ion-alert-controller> -->
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

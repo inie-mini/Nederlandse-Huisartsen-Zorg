@@ -1,0 +1,34 @@
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        Spoedeisende hulp
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label class="selections">(Vermoedelijk) letsel</ion-label>
+      <ion-select placeholder="Maak een keuze....">
+        <ion-select-option value="botbreuk">Botbreuk of ernstige verstuiking/kneuzing</ion-select-option>
+        <ion-select-option value="bloeding">Bloeding</ion-select-option>
+        <ion-select-option value="val">Erstige val</ion-select-option>
+        <ion-select-option value="hoofdletsel">Hoofdletsel</ion-select-option>
+        <ion-select-option value="verbranding">Verbranding</ion-select-option>
+        <ion-select-option value="overdosis-vergiftiging">Overdosis of vergiftiging</ion-select-option>
+        <ion-select-option value="bewusteloosheid">Bewusteloosheid</ion-select-option>
+        <ion-select-option value="hersenletsel">Hersenletsel</ion-select-option>
+        <ion-select-option value="onbekend">Onbekend en niet te achterhalen</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="selections">
+      <ion-label>Het slachtoffer heeft alcohol en/of drugs gebruikt</ion-label>
+      <ion-select class="custom-options" multiple="true">
+        <ion-select-option value="drugs">Drugs</ion-select-option>
+        <ion-select-option value="alcohol">Alcohol</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div id="mobiliteit">
+      <ion-button >Het slachtoffer is mobiel en kan vervoer regelen.</ion-button>
+      <ion-button >Het slachtoffer is niet mobiel en/of kan geen vervoer regelen.</ion-button>
+    </div>
+  </ion-list>
+</ion-content>

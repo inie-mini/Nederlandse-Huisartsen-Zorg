@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="flex-center">
+    <ion-card id="card-warning" >
+      <ion-card-header color="warning">
+        <ion-card-title>LET OP!</ion-card-title>
+        <ion-card-subtitle>
+          U staat op het punt een noodoproep te doen. Misbruik resulteert in uitschakeling van deze functie.
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button id="btn-lifethreatening" (click)=showAlert() expand="block" shape="round" color="danger">Levensbedreigende situatie</ion-button>
+        <ion-button id="btn-nonlifethreatening" href='not-life-threatening' expand="block" shape="round" color="warning">Niet levensbedreigend maar wel spoedeisend</ion-button>
+        
+      </ion-card-content>
+      <ion-button>
+          Annuleer
+        </ion-button>
+    </ion-card> 
+  </div>
+</ion-content>
