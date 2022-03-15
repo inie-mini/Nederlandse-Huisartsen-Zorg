@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nhz-chat": {
+      "hosting": {
+        "app": [
+          "nhz-chat"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nhz-chat"
+  }
+}

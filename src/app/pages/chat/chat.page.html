@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card class="chatBox ion-padding">
+  <ion-card-header class="header-info">
+    <ion-icon name="chevron-back" routerLink="../home"></ion-icon>
+    <ion-avatar>
+      <img src="https://i.pravatar.cc/243" />
+    </ion-avatar>
+    <div class="details">
+      <ion-card-title id="username">Ik, de zieke patient</ion-card-title>
+    <ion-card-subtitle id="status">online</ion-card-subtitle>
+    </div>
+  </ion-card-header>
+  <ion-card-content class="messagebox">
+    <div class="myMessages">
+      <ion-text class="message">
+        <p>Dokter, als ik met mijn vinger hier druk doet het zeer</p>
+      </ion-text>
+      <div class="message">
+        <p>en als ik met mijn vinger daar druk doet het ook zeer...</p>
+      </div>
+      <div class="mylast message">
+        <ion-avatar>
+          <img src="https://i.pravatar.cc/243" />
+        </ion-avatar>
+        <p>Overal doet het zeer</p>
+      </div>
+    </div>
+    <div class="doctorMessages">
+      <div class="message">
+        <p>Ow ik zie het al</p>
+      </div>
+      <div class="lastmessage">
+        <p>U heeft een gebroken vinger!</p>
+        <ion-avatar>
+          <img src="https://i.pravatar.cc/242" />
+        </ion-avatar>
+      </div>
+    </div>
+    
+    <div class="message-input">
+      <ion-input placeholder="Type your message here"></ion-input>
+      <div class="sendMessage"><ion-icon name="send-sharp"></ion-icon></div>
+    </div>
+  </ion-card-content>
+</ion-card>
+    
+</ion-content>

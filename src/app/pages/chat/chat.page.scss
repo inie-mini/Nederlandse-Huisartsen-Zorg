@@ -1,0 +1,104 @@
+.chatBox {
+  height: 90vh;
+  background-color: aliceblue;
+}
+.header-info {
+  display: flex;
+  align-items: center;
+  ion-avatar {
+    max-width: 51px;
+    max-height: 51px;
+    margin-inline-start: 15px;
+  }
+  .details{
+    margin-inline-start: 15px;
+    display: flex;
+    flex-direction: column;
+    #username, #status{
+      color: darkblue;
+      opacity: 0.4;
+    }
+  }
+}
+
+.messagebox {
+  border: 1px solid lightsteelblue;
+  background-color: var(--ion-color-tertiary-contrast);
+  height: calc(100% - 75px);
+  // padding: 25px 25px auto 15px;
+  // margin-block-end: 85px;
+  .message{
+    color: rgba(2, 2, 2, 0.562);
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+  }
+  .myMessages{
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 20px;
+    margin-block-end: 35px;
+    p{
+      color: --var(--ion-color-tertiary-shade);
+      background-color: aliceblue;
+      border: 1px solid rgb(177, 218, 253);
+      border-radius: 15px;
+      padding: 10px;
+      // padding-block-start: 10px;
+      // padding-block-end: 10px;
+      // padding-inline-start: 10px;
+      max-width: 50vw;
+    }
+    .mylast{
+      display: flex;
+      flex-direction: row;
+      ion-avatar{
+        max-width: 30px;
+        max-height: 30px;
+        align-self: center;
+        margin-inline-end: 10px;
+      }
+    }
+  }
+
+  .doctorMessages{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-block-start: 20px;
+    margin-block-end: 35px;
+    // background-color: rgba(50, 185, 248, 0.26);
+    p{
+      color: --var(--ion-color-tertiary-shade);
+      background-color: rgba(186, 196, 252, 0.295);
+      border: 1px solid rgba(177, 178, 253, 0.589);
+      border-radius: 15px;
+      padding: 10px;
+      // padding-block-start: 10px;
+      // padding-block-end: 10px;
+      // padding-inline-start: 10px;
+      max-width: 50vw;
+    }
+    .lastmessage{
+      display: flex;
+      flex-direction: row;
+      ion-avatar{
+        max-width: 30px;
+        max-height: 30px;
+        align-self: center;
+        margin-inline-start: 10px;
+      }
+    }
+  }
+  .message-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    background-color: rgba(189, 186, 186, 0.164);
+    border: 1px solid rgba(128, 128, 128, 0.185);
+    border-radius: 20px;
+    padding: 0px 10px;
+  }
+}
+
+
