@@ -1,56 +1,67 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Chat</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-<ion-card class="chatBox ion-padding">
-  <ion-card-header class="header-info">
-    <ion-icon name="chevron-back" routerLink="../home"></ion-icon>
-    <ion-avatar>
-      <img src="https://i.pravatar.cc/243" />
-    </ion-avatar>
-    <div class="details">
-      <ion-card-title id="username">Ik, de zieke patient</ion-card-title>
-    <ion-card-subtitle id="status">online</ion-card-subtitle>
-    </div>
-  </ion-card-header>
-  <ion-card-content class="messagebox">
-    <div class="myMessages">
-      <ion-text class="message">
-        <p>Dokter, als ik met mijn vinger hier druk doet het zeer</p>
-      </ion-text>
-      <div class="message">
-        <p>en als ik met mijn vinger daar druk doet het ook zeer...</p>
-      </div>
-      <div class="mylast message">
+  <ion-card>
+    <ion-card-header class="header ion-padding">
+      <div class="info">
+        <ion-icon name="chevron-back" routerLink="../home"></ion-icon>
         <ion-avatar>
           <img src="https://i.pravatar.cc/243" />
         </ion-avatar>
-        <p>Overal doet het zeer</p>
+        <span class="details">
+          <ion-card-title id="username">Ik, de zieke patient</ion-card-title>
+          <ion-card-subtitle id="status">online</ion-card-subtitle>
+        </span>
       </div>
-    </div>
-    <div class="doctorMessages">
-      <div class="message">
-        <p>Ow ik zie het al</p>
+    </ion-card-header>
+    <ion-card-content class="conversation ion-padding">
+      <div class="chat-section" id="chat">
+        <div class="chat">
+          <div class="my messages">
+            <div class="message">
+              Dokter, als ik met mijn vinger hier druk doet het zeer
+            </div>
+            <div class="message">
+              en als ik met mijn vinger daar druk doet het ook zeer...
+            </div>
+            <div class="message last">
+              Overal doet het zeer
+            </div> 
+            <span>
+              <ion-icon name="checkmark-done"></ion-icon> 09:44am
+            </span>
+          </div>
+          <div class="doctor messages">
+            <div class="message doc">
+              Ow ik zie het al
+            </div>
+            <div class="message-last-doc">
+              <ion-avatar>
+                <img src="https://i.pravatar.cc/242" />
+              </ion-avatar>
+              <div class="message last">
+                U heeft een gebroken vinger!
+              </div>
+            </div>
+            <span>
+              <ion-icon name="checkmark-done"></ion-icon> 09:48am
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="lastmessage">
-        <p>U heeft een gebroken vinger!</p>
-        <ion-avatar>
-          <img src="https://i.pravatar.cc/242" />
-        </ion-avatar>
+      <div class="message-input">
+        <ion-input placeholder="Type your message here..."></ion-input>
+        <div class="sendMessage">
+          <ion-icon name="send-sharp"></ion-icon>
+        </div>
       </div>
-    </div>
-    
-    <div class="message-input">
-      <ion-input placeholder="Type your message here"></ion-input>
-      <div class="sendMessage"><ion-icon name="send-sharp"></ion-icon></div>
-    </div>
-  </ion-card-content>
-</ion-card>
-    
+    </ion-card-content>
+  </ion-card>
 </ion-content>
