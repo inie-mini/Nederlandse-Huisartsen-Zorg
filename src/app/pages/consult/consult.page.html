@@ -7,6 +7,34 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="flex-center">
+    <div class="selection">
+      <ion-label>Kies de datum, dan tijd en geef dan aan of u een lange of korte consult wilt.</ion-label>
+      <ion-datetime 
+        dayValues=1,2,4,5,8,12,17,18,19 
+        hourValues="8,9,10,11,13,14,15,16" 
+        minuteValues="0,15,30,45" 
+        min="2022-04-17" max="2023-12-31">
+        <div slot="time-label">Kies uw gewenste tijd</div>
+      </ion-datetime>
+      <ion-item id="consultLength">
+        <ion-label>Soort consult:</ion-label>
+        <ion-select value="lengthConsult" multiple="false">
+          <ion-select-option value="shortConsult">Kort &#40;15 min&#41;</ion-select-option>
+          <ion-select-option value="longConsult">Lang &#40;30 min&#41;</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item id="complaintDescription">
+        <ion-label position="floating">Klacht omschrijving:</ion-label>
+          <ion-textarea></ion-textarea>
+      </ion-item>
+      <div class="buttons">
+        <ion-button id="Submit" (click)="onClick()" expand="block" shape="round">
+          Inplannen
+        </ion-button>
+        <ion-button id="Cancel" (click)="onClick()" expand="block" shape="round">
+          Annuleren
+        </ion-button>
+      </div>
+    </div>
 </ion-content>

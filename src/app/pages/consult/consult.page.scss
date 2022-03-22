@@ -1,0 +1,33 @@
+.selection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  ion-label{
+    width: 80vw;
+    margin:20px;
+  }
+  ion-datetime{
+    border-radius: 20px;
+    margin-block-end: 10px;
+  }
+  #consultLength{
+    border-radius: 20px;
+    width: 350px;
+    margin: 10px;
+  }
+  #complaintDescription{
+    border-radius: 20px;
+    width: 350px;
+    margin: 10px;
+    ion-textarea{
+      height: auto;
+    }
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    margin-block-end: 35px;
+  }
+}
