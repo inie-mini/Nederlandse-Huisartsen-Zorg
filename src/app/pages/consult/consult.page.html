@@ -18,7 +18,7 @@
         <div slot="time-label">Kies uw gewenste tijd</div>
       </ion-datetime>
       <ion-item id="consultLength">
-        <ion-label>Soort consult:</ion-label>
+        <ion-label>Duur van het consult:</ion-label>
         <ion-select value="lengthConsult" multiple="false">
           <ion-select-option value="shortConsult">Kort &#40;15 min&#41;</ion-select-option>
           <ion-select-option value="longConsult">Lang &#40;30 min&#41;</ion-select-option>
@@ -26,7 +26,7 @@
       </ion-item>
       <ion-item id="complaintDescription">
         <ion-label position="floating">Klacht omschrijving:</ion-label>
-          <ion-textarea></ion-textarea>
+          <ion-textarea rows="10"></ion-textarea>
       </ion-item>
       <div class="buttons">
         <ion-button id="Submit" (click)="onClick()" expand="block" shape="round">

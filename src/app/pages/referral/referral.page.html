@@ -7,6 +7,50 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="flex-center">
+  <form action="">
+  
+    <ion-item id="complaintDescription">
+      <ion-label position="floating">Klacht omschrijving:</ion-label>
+      <ion-textarea rows="10"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gewenste specialist</ion-label>
+      <ion-select value="specialist" multiple="false">
+        <ion-select-option value="specialist1">geen voorkeur</ion-select-option>
+        <ion-select-option value="specialist1">specialist 1</ion-select-option>
+        <ion-select-option value="specialist2">specialist 2</ion-select-option>
+        <ion-select-option value="specialist3">specialist 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bent u al eerder voor deze klacht behandeld</ion-label>
+      <ion-select value="treated" multiple="false">
+        <ion-select-option value="treatedYes">Ja</ion-select-option>
+        <ion-select-option value="treatedNo">Nee</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bent u al eerder bij deze specialist geweest</ion-label>
+      <ion-select value="treated" multiple="false">
+        <ion-select-option value="treatedYes">Ja</ion-select-option>
+        <ion-select-option value="treatedNo">Nee</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Wilt u vooraf contact met de arts hierover</ion-label>
+      <ion-select value="treated" multiple="false">
+        <ion-select-option value="treatedYes">Ja</ion-select-option>
+        <ion-select-option value="treatedNo">Nee</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="buttons">
+      <ion-button id="Submit" (click)="onClick()" expand="block" shape="round">
+        Inplannen
+      </ion-button>
+      <ion-button id="Cancel" href="../home/" expand="block" shape="round">
+        Annuleren
+      </ion-button>
+    </div>
+  </form>
 </ion-content>

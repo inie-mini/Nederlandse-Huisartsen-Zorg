@@ -1,0 +1,24 @@
+form{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+ion-item{
+  border-radius: 20px;
+  font-size: 13px;
+  margin-block-start: 10px;
+  margin-block-end: 5px;
+}
+
+.buttons{
+  display: inline-flex;
+  justify-content: space-around;
+  margin-block-start: 20px;
+  ion-button{
+    width: 135px;
+  }
+}
