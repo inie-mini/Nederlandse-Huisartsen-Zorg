@@ -7,6 +7,49 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="flex-center">
+  <form action="">
+    <ion-item id="purpose-bloodwork">
+      <ion-label position="floating">Klacht omschrijving:</ion-label>
+      <ion-textarea rows="10"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Onderzoeken op</ion-label>
+      <ion-select value="bloodwork" multiple="true">
+        <ion-select-option value="treatedYes">Allergie&euml;n</ion-select-option>
+        <ion-select-option value="treatedNo">Bloedarmoede</ion-select-option>
+        <ion-select-option value="treatedYes">Blauw bloed (adel)</ion-select-option>
+        <ion-select-option value="treatedNo">Toekomst voorspelling</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bent u hier al eerder op onderzocht</ion-label>
+      <ion-select value="researched-before" multiple="false">
+        <ion-select-option value="researched-before-Yes">Ja</ion-select-option>
+        <ion-select-option value="researched-before-No">Nee</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Bent u hier al eerder voor bij de huisarts geweest</ion-label>
+      <ion-select value="visited-general-practitioner" multiple="false">
+        <ion-select-option value="visited-general-practitioner-Yes">Ja</ion-select-option>
+        <ion-select-option value="visited-general-practitioner-No">Nee</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Wilt u vooraf contact met de arts hierover</ion-label>
+      <ion-select value="contact" multiple="false">
+        <ion-select-option value="contactYes">Ja</ion-select-option>
+        <ion-select-option value="contactNo">Nee</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="buttons">
+      <ion-button id="Submit" (click)="onClick()" expand="block" shape="round">
+        Submit
+      </ion-button>
+      <ion-button id="Cancel" href="../home/" expand="block" shape="round">
+        Annuleren
+      </ion-button>
+    </div>
+  </form>
 </ion-content>
