@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { EmergencyPage } from './emergency.page';
+import { ModalPagePage } from './modal-page.page';
 
-describe('EmergencyPage', () => {
-  let component: EmergencyPage;
-  let fixture: ComponentFixture<EmergencyPage>;
+describe('ModalPagePage', () => {
+  let component: ModalPagePage;
+  let fixture: ComponentFixture<ModalPagePage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmergencyPage ],
+      declarations: [ ModalPagePage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(EmergencyPage);
+    fixture = TestBed.createComponent(ModalPagePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
@@ -22,4 +22,3 @@ describe('EmergencyPage', () => {
     expect(component).toBeTruthy();
   });
 });
-

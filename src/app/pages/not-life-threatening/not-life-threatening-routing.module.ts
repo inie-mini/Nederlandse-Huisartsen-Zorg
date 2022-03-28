@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: NotLifeThreateningPage
+  },
+  {
+    path: 'modal-page',
+    loadChildren: () => import('./modal-page/modal-page.module').then( m => m.ModalPagePageModule)
+  },
+  {
+    path: 'not-mobile',
+    loadChildren: () => import('./not-mobile/not-mobile.module').then( m => m.NotMobilePageModule)
   }
 ];
 

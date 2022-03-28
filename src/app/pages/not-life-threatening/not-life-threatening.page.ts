@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ModalPagePage } from '../not-life-threatening/modal-page/modal-page.page';
 
 @Component({
   selector: 'app-not-life-threatening',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotLifeThreateningPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
+
+  async openTransparentModal() {
+    const modal = await this.modalCtrl.create({
+      component: ModalPagePage,
+      cssClass: 'transparent-modal'
+    });
+    await modal.present();
+  }
 
   ngOnInit() {
   }

@@ -1,4 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
 <ion-content>
+  
   <ion-list>
     <ion-list-header>
       <ion-label>
@@ -6,9 +14,9 @@
       </ion-label>
     </ion-list-header>
     <ion-item>
-      <ion-label class="selections">(Vermoedelijk) letsel</ion-label>
+      <ion-label class="selections">&lpar;Vermoedelijk&rpar; letsel</ion-label>
       <ion-select placeholder="Maak een keuze....">
-        <ion-select-option value="botbreuk">Botbreuk of ernstige verstuiking/kneuzing</ion-select-option>
+        <ion-select-option value="botbreuk">Botbreuk of ernstige verstuiking&sol;kneuzing</ion-select-option>
         <ion-select-option value="bloeding">Bloeding</ion-select-option>
         <ion-select-option value="val">Erstige val</ion-select-option>
         <ion-select-option value="hoofdletsel">Hoofdletsel</ion-select-option>
@@ -20,15 +28,18 @@
       </ion-select>
     </ion-item>
     <ion-item class="selections">
-      <ion-label>Het slachtoffer heeft alcohol en/of drugs gebruikt</ion-label>
+      <ion-label>Het slachtoffer heeft alcohol en&sol;of drugs gebruikt</ion-label>
       <ion-select class="custom-options" multiple="true">
         <ion-select-option value="drugs">Drugs</ion-select-option>
         <ion-select-option value="alcohol">Alcohol</ion-select-option>
       </ion-select>
     </ion-item>
     <div id="mobiliteit">
-      <ion-button >Het slachtoffer is mobiel en kan vervoer regelen.</ion-button>
-      <ion-button >Het slachtoffer is niet mobiel en/of kan geen vervoer regelen.</ion-button>
+      <ion-button (click)="openTransparentModal()" expand="full" color="secondary" shape="round">
+        Het slachtoffer is mobiel en kan vervoer regelen..
+      </ion-button>
+      <ion-button href="not-life-threatening/not-mobile">Het slachtoffer is niet mobiel en&sol;of kan geen vervoer regelen.</ion-button>
     </div>
   </ion-list>
+  
 </ion-content>
