@@ -36,11 +36,14 @@ ion-list{
     height: 50px;
     white-space: normal;
   }
-  // ion-label {
-  // font-size:large;
-  // }
+
 }
 
 .selections{
   font-size: 12px;
 }
+ion-footer{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+} 

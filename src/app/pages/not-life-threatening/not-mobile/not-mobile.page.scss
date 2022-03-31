@@ -33,5 +33,9 @@ ion-content{
     // display: none;
     height: 90%;
   }
-  
 }
+ion-footer{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+} 

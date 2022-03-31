@@ -45,7 +45,7 @@ ion-content {
     border: 1px solid lightsteelblue;
     border-radius: 15px;
     background-color: rgba(240, 255, 255, 0.336);
-    height: 84vh;
+    height: 80vh;
     padding: 5px;
     margin: 10px;
 
@@ -146,7 +146,7 @@ ion-content {
       width: 85vw;
       justify-content: space-between;
       position: fixed;
-      bottom: 30px;
+      bottom: 75px;
       left: 50%;
       margin-left: -43vw;
       ion-input{
@@ -164,5 +164,10 @@ ion-content {
         border-radius: 50%;
       }
     }
+  }
+  ion-footer{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
   } 
 }
