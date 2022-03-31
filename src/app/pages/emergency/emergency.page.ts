@@ -22,24 +22,4 @@ export class EmergencyPage implements OnInit {
 
   ngOnInit() {
   }
-
-  // async showAlert() {
-  //   await this.alertCtrl.create({
-  //     header: 'LET OP!!!',
-  //     message: 'U staat op het punt een noodoproep te doen. Misbruik resulteert in uitschakeling van deze functie.',
-  //     buttons: [
-  //       {
-  //         text: 'Niet levensbedreigend maar wel spoedeisend.', handler: (res1) => {
-  //           alert('112 is gebeld.');
-  //         }
-  //       },
-  //       {
-  //         text: 'LEVENSBEDREIGENDE SITUATIE',
-  //         handler: () => {
-  //           this.navCtrl.navigateRoot(url(), '/home.page.html'),
-  //         }
-  //       }
-  //     ]
-  //   }).then(res => res.present());
-  // }
 }

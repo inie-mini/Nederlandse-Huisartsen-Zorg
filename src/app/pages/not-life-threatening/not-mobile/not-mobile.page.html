@@ -8,35 +8,39 @@
 </ion-header>
 
 <ion-content>
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>Vul uw huidige adres in...</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <form action="" method="post" id="huidigeplaats">
-      <ion-item>
-        <ion-label position="floating">Straatnaam&colon;</ion-label>
-        <ion-input type="text" id="streetname"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Huisnummer&colon;</ion-label>
-        <ion-input type="text" id="streetnumber"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Postcode&colon;</ion-label>
-        <ion-input type="text" id="zipcode"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Plaats&colon;</ion-label>
-        <ion-input type="text" id="city"></ion-input>
-      </ion-item>
-      <ion-button expand="block" shape="round" type="submit">Stuur hulpdiensten naar dit adres</ion-button>
-      <p>OF</p>
-      <ion-button expand="block" fill="clear" shape="round">
-        Ik ben niet op een adres, ga naar de locatie van dit apparaat.
-      </ion-button>
-    </form>
-  </ion-card-content>
-</ion-card>
-<div #map id="map"></div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Vul uw huidige adres in...</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form action="" method="post" id="huidigeplaats">
+        <ion-item>
+          <ion-label position="floating">Straatnaam&colon;</ion-label>
+          <ion-input type="text" id="streetname"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Huisnummer&colon;</ion-label>
+          <ion-input type="text" id="streetnumber"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Postcode&colon;</ion-label>
+          <ion-input type="text" id="zipcode"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Plaats&colon;</ion-label>
+          <ion-input type="text" id="city"></ion-input>
+        </ion-item>
+        <ion-button expand="block" shape="round" type="submit">Stuur hulpdiensten naar dit adres</ion-button>
+        <p>OF</p>
+        <ion-button expand="block" fill="clear" shape="round" (click)="toggleImg()">
+          Ik ben niet op een adres, ga naar de locatie van dit apparaat.
+        </ion-button>
+      </form>
+      <div id="showMaps">
+        <div id="mapText">Er is hulp onderweg, blijf waar u bent. Uw locatie: {{data}}</div>
+        <div #map id="googleMaps"></div>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
 </ion-content>
