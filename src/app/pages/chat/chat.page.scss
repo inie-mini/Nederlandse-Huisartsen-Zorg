@@ -1,3 +1,7 @@
+ion-card{
+  height: 97%;
+}
+
 ion-content {
   ion-avatar{
     width: 100% !important;
@@ -45,12 +49,13 @@ ion-content {
     border: 1px solid lightsteelblue;
     border-radius: 15px;
     background-color: rgba(240, 255, 255, 0.336);
-    height: 80vh;
+    height: 43vh;
     padding: 5px;
     margin: 10px;
+    margin-bottom: 70px;
 
     .chat-section {
-      height: calc(100% - 85px);
+      height: 100% ;
       overflow: scroll;
 
       .chat {

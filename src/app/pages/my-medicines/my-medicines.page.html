@@ -8,8 +8,87 @@
 </ion-header>
 
 <ion-content>
-
+  <div class="medicine">
+    <div id="legenda">
+      <h1>Legenda:</h1>
+      <p><ion-icon name="document-attach-outline"></ion-icon> = Bijsluiter downloaden</p>
+      <p><ion-icon name="add-outline"></ion-icon> = Nieuw recept aanvragen</p>
+      <p><ion-icon name="call-outline"></ion-icon> - Vragen stellen over gebruik</p>
+      <p><ion-icon name="help-outline"></ion-icon> - FAQ</p>
+    </div>
+    <ion-card>
+      <div class="meds meds1">
+        <ion-card-subtitle>Medicijn 1</ion-card-subtitle>
+        <ion-card-content class="buttons">
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="document-attach-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="help-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </div>
+      <div class="meds meds2">
+        <ion-card-subtitle>Medicijn 2</ion-card-subtitle>
+        <ion-card-content class="buttons">
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="document-attach-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="help-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </div>
+      <div class="meds meds3">
+        <ion-card-subtitle>Medicijn 3</ion-card-subtitle>
+        <ion-card-content class="buttons">
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="document-attach-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="help-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </div>
+      <div class="meds meds4">
+        <ion-card-subtitle>Medicijn 4</ion-card-subtitle>
+        <ion-card-content class="buttons">
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="document-attach-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="call-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()">
+            <ion-icon slot="icon-only" name="help-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>
+
 <ion-footer>
   <ion-toolbar>
     <ion-tabs>

@@ -1,3 +1,47 @@
+.medicine{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  
+  #legenda{
+    h1{font-size: 1rem;}
+    color: steelblue;
+    font-size: 0.7rem;
+  }
+
+  ion-card{
+    width: 85vw;
+    max-width: 400px;
+    margin-bottom: 60px;
+    .meds{
+      display: flex;
+      height: 50px;
+      border-bottom: 1px dotted #666;
+      justify-content: space-between;
+    }
+
+    &-subtitle {
+      margin-inline-start: 10px;
+      align-self: center;
+    }
+    
+    &-content{
+      display: grid;
+      max-width: 250px;
+      grid-template-columns: repeat(4, 1fr);
+      align-content: center;
+    }
+
+    ion-button{
+      width: 45px;
+      height: 30px;
+    }
+
+  }
+}
+
 ion-footer{
   position: fixed;
   bottom: 0;
