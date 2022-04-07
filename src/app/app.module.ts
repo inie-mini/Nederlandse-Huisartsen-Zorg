@@ -15,6 +15,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +27,9 @@ import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
     AngularFirestoreModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())],
+    provideFirestore(() => getFirestore()),
+    HttpClientModule,
+    AuthModule],
   providers: [
     Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

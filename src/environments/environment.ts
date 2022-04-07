@@ -3,24 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  firebase: {
-    projectId: 'nhz-chat',
-    appId: '1:675140680752:web:98c198e1aa4823c3b401f5',
-    storageBucket: 'nhz-chat.appspot.com',
-    locationId: 'europe-west',
-    apiKey: 'AIzaSyBlqbkN16ZhPNiHt5E9giW_jJ8sf-tgulw',
-    authDomain: 'nhz-chat.firebaseapp.com',
-    messagingSenderId: '675140680752',
-  },
   production: false,
-  firebaseConfig: {
-    apiKey: 'AIzaSyBlqbkN16ZhPNiHt5E9giW_jJ8sf-tgulw',
-    authDomain: 'nhz-chat.firebaseapp.com',
-    projectId: 'nhz-chat',
-    storageBucket: 'nhz-chat.appspot.com',
-    messagingSenderId: '675140680752',
-    appId: '1:675140680752:web:98c198e1aa4823c3b401f5'
-  }
+  oidcConfig: {
+    client_id: '0oa4l1cr9iYIpm8jG5d7',
+    server_host: 'https://dev-64081855.okta.com/oauth2/default',
+    redirect_url: window.location.origin + '/callback',
+    end_session_redirect_url: window.location.origin + '/logout',
+    scopes: 'openid profile',
+    pkce: true,
+    audience: 'api://default'
+  },
+  scheme: 'com.okta.dev-64081855:/'
 };
 
 /*
