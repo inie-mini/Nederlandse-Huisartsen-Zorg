@@ -1,20 +1,52 @@
 import { Component } from '@angular/core';
-
 import { Platform } from '@ionic/angular';
-
 import { SplashScreen } from '@capacitor/splash-screen';
-
 import { AuthService } from 'ionic-appauth';
+//import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
+
 export class AppComponent {
+  appPages = [
+    {
+      title: 'Chat met huisarts',
+      url: '/chat',
+      icon: 'chatbubbles'
+    },
+    {
+      title: 'Consultaanvraag',
+      url: '/consult',
+      icon: 'clipboard'
+    },
+    {
+      title: 'Doorverwijzing',
+      url: '/referral',
+      icon: 'play-forward'
+    },
+    {
+      title: 'Bloedonderzoek',
+      url: '/bloodtest',
+      icon: 'water'
+    },
+    {
+      title: 'Mijn medicijnen',
+      url: '/my-medicines',
+      icon: 'flask'
+    },
+    {
+      title: 'Spoed',
+      url: '/emergency',
+      icon: 'medical'
+    }
+  ]
 
   constructor(
     public platform: Platform,
     public auth: AuthService,
+    //public menuCtrl: MenuController
   ) {
     this.initializeApp();
   }

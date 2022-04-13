@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+//import { menuController } from '@ionic/core';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public menuCtrl: MenuController
+  ) { 
+    this.menuCtrl.enable(true, "menuuu");
+  }
 
   ngOnInit() {
   }
