@@ -11,7 +11,24 @@
       <ion-card-title>Registratie</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-item>
+
+      <form>    
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" #email required></ion-input>
+        </ion-item> 
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col> 
+          <ion-button type="submit" (click)="signUp(email, password)" expand="block">Register</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+
+      <!-- <ion-item>
         <ion-label position="floating">Gebruikersnaam &ast;</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
@@ -45,7 +62,7 @@
       </ion-item>
       <ion-text color="danger">
         <p>&ast; verplichte velden</p>
-      </ion-text>
+      </ion-text> -->
     </ion-card-content>
     <ion-button fill="clear" size="full" shape="round" href="home">Registreren</ion-button>
     <ion-button fill="clear" size="full" shape="round">Annuleren</ion-button>

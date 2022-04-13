@@ -1,7 +1,36 @@
 <ion-content fullscreen>
   <div class="flex-center">
     <ion-card>
-      <ion-card-header>
+
+      <form>    
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" #email required></ion-input>
+        </ion-item> 
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col> 
+          <ion-button type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button
+              type="submit"
+              color="danger"
+              (click)="authService.GoogleAuth()"
+              expand="block"
+            >
+              Login with Google
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+
+      <!-- <ion-card-header>
         <ion-card-title color="secondary">NHZ-Login</ion-card-title>
       </ion-card-header>
       <ion-card-content>
@@ -16,7 +45,7 @@
         <ion-button color="dark" fill="clear" size="full" href="forgot-pw">paswoord vergeten?</ion-button>
         <ion-button expand="block" color="secondary" shape="round" href="home">Login</ion-button>
         <ion-button expand="block" fill="clear" shape="round" href="register">Registreren</ion-button>
-      </ion-card-content>
+      </ion-card-content> -->
     </ion-card>
   </div>
 </ion-content>

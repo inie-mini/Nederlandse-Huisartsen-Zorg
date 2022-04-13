@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Injectable } from '@angular/core';
 import { Requestor, TokenResponse } from '@openid/appauth';
 import { AuthService } from 'ionic-appauth';

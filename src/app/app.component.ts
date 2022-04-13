@@ -13,8 +13,8 @@ import { AuthService } from 'ionic-appauth';
 export class AppComponent {
 
   constructor(
-    private platform: Platform,
-    private auth: AuthService,
+    public platform: Platform,
+    public auth: AuthService,
   ) {
     this.initializeApp();
   }
@@ -25,7 +25,6 @@ export class AppComponent {
       if (this.platform.is('mobile') && !this.platform.is('mobileweb')) {
         await SplashScreen.hide();
       }
-      
     });
   }
 }

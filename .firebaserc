@@ -1,14 +1,14 @@
 {
   "targets": {
-    "nhz-chat": {
+    "nederlandsehuisartsenzorg": {
       "hosting": {
         "app": [
-          "nhz-chat"
+          "nederlandsehuisartsenzorg"
         ]
       }
     }
   },
   "projects": {
-    "default": "nhz-chat"
+    "default": "nederlandsehuisartsenzorg"
   }
 }
