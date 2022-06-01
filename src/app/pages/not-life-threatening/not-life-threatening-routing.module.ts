@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'not-mobile',
     loadChildren: () => import('./not-mobile/not-mobile.module').then( m => m.NotMobilePageModule)
-  }
+  },
 ];
 
 @NgModule({

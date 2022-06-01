@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header id="toolHead">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -16,9 +16,14 @@
           <ion-icon name="information-circle"></ion-icon>
           <ion-label>Help</ion-label>
         </ion-tab-button>
-            <ion-tab-button href="profiel">
+        <ion-tab-button href="profiel">
           <ion-icon name="id-card"></ion-icon>
           <ion-label>Profiel</ion-label>
+        </ion-tab-button>
+        <!-- LOGOUT -->
+        <ion-tab-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+          <ion-label>Log uit</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -41,28 +46,7 @@
       <ion-card-title>Nieuwsbericht 2</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi expedita laudantium debitis placeat reiciendis similique. Praesentium ipsa similique unde repellendus a? Suscipit et, sint quae iusto modi corrupti minima accusamus?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam blanditiis libero autem delectus quaerat quod nemo earum molestiae est non.
     </ion-card-content>
   </ion-card>
 </ion-content>
-
-<!-- <ion-footer>
-  <ion-toolbar>
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button href="home">
-          <ion-icon name="home"></ion-icon>
-          <ion-label>Home</ion-label>
-        </ion-tab-button>
-        <ion-tab-button href="#">
-          <ion-icon name="information-circle"></ion-icon>
-          <ion-label>Help</ion-label>
-        </ion-tab-button>
-            <ion-tab-button href="profiel">
-          <ion-icon name="id-card"></ion-icon>
-          <ion-label>Profiel</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-toolbar>
-</ion-footer> -->

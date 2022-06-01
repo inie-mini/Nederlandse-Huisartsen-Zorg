@@ -36,7 +36,6 @@ ion-list{
     height: 50px;
     white-space: normal;
   }
-
 }
 
 .selections{
@@ -46,4 +45,8 @@ ion-footer{
   position: fixed;
   bottom: 0;
   height: 50px;
-} 
+}
+
+ion-back-button{
+  margin-block-start: 15px;
+}

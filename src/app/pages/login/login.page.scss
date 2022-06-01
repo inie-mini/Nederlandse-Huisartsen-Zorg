@@ -1,4 +1,14 @@
 ion-button[color="dark"]{
   text-transform: initial;
-  margin-bottom: 20px;
+  //margin-bottom: 5px;
+}
+ion-row{
+  margin-block-start: 25px;
+}
+
+ion-item {
+  font-size: 16px;
+  ion-label {
+    margin-block-end: 15px;
+  }
 }

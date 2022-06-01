@@ -1,11 +1,14 @@
-.bar-footer {
-  overflow: visible !important;
-}
 
-.bar-footer textarea {
-  resize: none;
-  height: 25px;
-}
+
+
+// .bar-footer {
+//   overflow: visible !important;
+// }
+
+// .bar-footer textarea {
+//   resize: none;
+//   height: 25px;
+// }
 
 
 
@@ -65,97 +68,98 @@
 //     margin: 10px;
 //     margin-bottom: 70px;
 
-//     .chat-section {
-//       height: 100% ;
-//       overflow: scroll;
+//     // .chat-section {
+//     //   height: 100% ;
+//     //   overflow: scroll;
 
-//       .chat {
-//         display: flex;
-//         flex-direction: column;
+//     //   .chat {
+//     //     display: flex;
+//     //     flex-direction: column;
       
-//         .messages {
-//           display: flex;
-//           flex-direction: column;
-//           .message {
-//             border-radius: 15px;
-//             padding: 10px 15px;
-//             margin-block-start: 5px;
-//             margin-block-end: 5px;
-//             font-size: 0.8rem;
-//           }
-//         }  
-//         .my{
-//           align-items: flex-end;
-//           span{
-//             font-size: 0.7rem;
-//             color: #a6a6a6;
-//             margin-inline-start: 40px;
-//           }
-//           .message {
-//             background: rgba(29, 241, 135, 0.144);
-//             position: relative;
-//             max-width: 70vw;
-//           }
-//           .message-last-mine{
-//             display: flex;
-//             margin-block-end: 5px;
-//             ion-avatar{
-//               max-width: 30px;
-//               max-height: 30px;
-//               margin-inline-start: 15px;
-//               margin-block-start: 8px;
-//             }
-//           }
-//         }
+//     //     .messages {
+//     //       display: flex;
+//     //       flex-direction: column;
+//     //       .message {
+//     //         border-radius: 15px;
+//     //         padding: 10px 15px;
+//     //         margin-block-start: 5px;
+//     //         margin-block-end: 5px;
+//     //         font-size: 0.8rem;
+//     //       }
+//     //     }  
+//     //     .my{
+//     //       align-items: flex-end;
+//     //       span{
+//     //         font-size: 0.7rem;
+//     //         color: #a6a6a6;
+//     //         margin-inline-start: 40px;
+//     //       }
+//     //       .message {
+//     //         background: rgba(29, 241, 135, 0.144);
+//     //         position: relative;
+//     //         max-width: 70vw;
+//     //       }
+//     //       .message-last-mine{
+//     //         display: flex;
+//     //         margin-block-end: 5px;
+//     //         ion-avatar{
+//     //           max-width: 30px;
+//     //           max-height: 30px;
+//     //           margin-inline-start: 15px;
+//     //           margin-block-start: 8px;
+//     //         }
+//     //       }
+//     //     }
           
-//         .doctor{
-//           align-items: flex-start;
-//           span{
-//             font-size: 0.7rem;
-//             color: #a6a6a6;
-//             margin-inline-start: 40px;
-//           }
-//           .message {
-//             background: #f16b1d25;
-//             position: relative;
-//             max-width: 70vw;
-//           }
-//           .message-last-doc{
+//     //     .doctor{
+//     //       align-items: flex-start;
+//     //       span{
+//     //         font-size: 0.7rem;
+//     //         color: #a6a6a6;
+//     //         margin-inline-start: 40px;
+//     //       }
+//     //       .message {
+//     //         background: #f16b1d25;
+//     //         position: relative;
+//     //         max-width: 70vw;
+//     //       }
+//     //       .message-last-doc{
 
-//             &:before{
-//                   content: "";
-//                   position:absolute;
-//                   z-index: 0;
-//                   bottom: 0;
-//                   left: -7px;
-//                   height: 20px;
-//                   background: #eee;
-//                   border-bottom-right-radius: 15px;
-//                 }
-//                 &::after{
-//                   content: "";
-//                   position: absolute;
-//                   z-index: 1;
-//                   bottom: 0;
-//                   left: -10px;
-//                   width: 10px;
-//                   height: 20px;
-//                   background: #fff;
-//                   border-top-right-radius: 10px;
-//                 }
+//     //         &:before{
+//     //               content: "";
+//     //               position:absolute;
+//     //               z-index: 0;
+//     //               bottom: 0;
+//     //               left: -7px;
+//     //               height: 20px;
+//     //               background: #eee;
+//     //               border-bottom-right-radius: 15px;
+//     //             }
+//     //             &::after{
+//     //               content: "";
+//     //               position: absolute;
+//     //               z-index: 1;
+//     //               bottom: 0;
+//     //               left: -10px;
+//     //               width: 10px;
+//     //               height: 20px;
+//     //               background: #fff;
+//     //               border-top-right-radius: 10px;
+//     //             }
 
-//             display: flex;
-//             margin-block-start: 5px;
-//             ion-avatar{
-//               max-width: 30px;
-//               max-height: 30px;
-//               margin-inline-end: 10px;
-//               margin-block-start: 8px;
-//             }
-//           }
-//         }
-//       }
-//     }
+//     //         display: flex;
+//     //         margin-block-start: 5px;
+//     //         ion-avatar{
+//     //           max-width: 30px;
+//     //           max-height: 30px;
+//     //           margin-inline-end: 10px;
+//     //           margin-block-start: 8px;
+//     //         }
+//     //       }
+//     //     }
+//     //   }
+//     // }
+
 //     .message-input{
 //       display: flex;
 //       align-items: center;
@@ -181,9 +185,9 @@
 //       }
 //     }
 //   }
-//   ion-footer{
-//     position: fixed;
-//     bottom: 0;
-//     height: 50px;
-//   } 
+//   // ion-footer{
+//   //   position: fixed;
+//   //   bottom: 0;
+//   //   height: 180px;
+//   // } 
 // }

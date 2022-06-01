@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { AuthService } from 'ionic-appauth';
-//import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -46,7 +45,6 @@ export class AppComponent {
   constructor(
     public platform: Platform,
     public auth: AuthService,
-    //public menuCtrl: MenuController
   ) {
     this.initializeApp();
   }

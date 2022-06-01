@@ -12,4 +12,7 @@ export class ReferralPage implements OnInit {
   ngOnInit() {
   }
 
+  onClick(){
+    alert("Uw aanvraag is ingediend, u ontvangt zo spoedig mogelijk bericht.")
+  }
 }

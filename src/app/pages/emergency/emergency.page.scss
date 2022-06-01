@@ -5,4 +5,11 @@ ion-footer{
   position: fixed;
   bottom: 0;
   height: 50px;
-} 
+}
+ion-back-button{
+  height: 40px;
+}
+.flex-center{
+  display:flex;
+  flex-direction: column;
+}

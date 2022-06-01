@@ -16,9 +16,13 @@
           <ion-icon name="information-circle"></ion-icon>
           <ion-label>Help</ion-label>
         </ion-tab-button>
-            <ion-tab-button href="profiel">
+        <ion-tab-button href="profiel">
           <ion-icon name="id-card"></ion-icon>
           <ion-label>Profiel</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+          <ion-label>Log uit</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -63,7 +67,7 @@
     </ion-item>
     <div class="buttons">
       <ion-button id="Submit" (click)="onClick()" expand="block" shape="round">
-        Inplannen
+        Aanvragen
       </ion-button>
       <ion-button id="Cancel" href="../home/" expand="block" shape="round">
         Annuleren

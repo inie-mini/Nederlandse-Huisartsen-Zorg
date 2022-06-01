@@ -1,44 +1,50 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController, ModalController } from '@ionic/angular';
-import { Emergency2Page } from '../emergency2/emergency2.page';
-import { AuthenticationService } from '../../services/shared/authentication-service';
-import { user } from 'rxfire/auth';
-// import { Auth } from '@angular/fire/auth';
-// import { getAuth } from 'firebase/auth';
-// import { AuthService } from 'ionic-appauth';
-
+import { Auth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+import { LoadingController, MenuController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-emergency',
   templateUrl: './emergency.page.html',
   styleUrls: ['./emergency.page.scss'],
 })
+
 export class EmergencyPage implements OnInit {
 
   constructor(
-    private modalCtrl: ModalController,
-    public authService: AuthenticationService,
-    public menuCtrl: MenuController
-    ) { 
-      //this.menuCtrl.enable(false,"menuuu");
+    private auth: Auth,
+    private authService: AuthService,
+    private loadingCtrl: LoadingController,
+    public menuCtrl: MenuController,
+    private router: Router,
+  ) {}
+
+  async ngOnInit() { 
+    console.clear();
+    const user = this.auth.currentUser;
+    const menu2 = document.getElementById("toolHead");
+    const backBtn = document.getElementById("backToLogin");
+
+    const loading = await this.loadingCtrl.create({message: 'Moment geduld aub...', duration: 5000});
+    await loading.present();
+
+    if (user){
+      console.log(user.email + " is ingelogd.")
+      backBtn.style.display = 'none';
+      this.menuCtrl.enable(true);
+    } else {
+      console.log("Niemand is ingelogd.");
+      backBtn.style.display = 'block';
+      menu2.style.display = "none";
+      this.menuCtrl.enable(false);
     }
 
-  async openTransparentModal(){
-    const modal = await this.modalCtrl.create({
-      component: Emergency2Page,
-      cssClass: 'emergency2-modal'
-    });
-  await modal.present();
+    await loading.dismiss();
   }
 
-  ngOnInit() {
-    if(this.authService.isLoggedIn() === false)
-    {
-      this.menuCtrl.enable(false, 'menuuu');
-      console.log("uitgelogd")
-    }
-    else{console.log("ingelogd")}  
+  async logout() {
+    await this.authService.logout();
+    this.router.navigateByUrl('/', { replaceUrl: true });
   }
 }
-
-

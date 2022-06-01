@@ -6,8 +6,13 @@ ion-button {
 ion-card-content {
 margin-block-start: 20px;
 }
+
 ion-footer{
   position: fixed;
   bottom: 0;
   height: 50px;
+}
+
+ion-back-button{
+  margin-block-start: 15px;
 }

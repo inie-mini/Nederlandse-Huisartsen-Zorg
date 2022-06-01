@@ -21,10 +21,11 @@ ion-content{
   }
 
   #mapText {
-    margin: 0 auto;
+    margin: 25px auto;
     width: 100%;
     // display: none;
     height: 50px;
+
     color: red;
   }
   #googleMaps {
@@ -39,3 +40,7 @@ ion-footer{
   bottom: 0;
   height: 50px;
 } 
+
+ion-back-button{
+  margin-block-start: 10px;
+}

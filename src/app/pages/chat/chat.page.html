@@ -16,137 +16,43 @@
           <ion-icon name="information-circle"></ion-icon>
           <ion-label>Help</ion-label>
         </ion-tab-button>
-            <ion-tab-button href="profiel">
+        <ion-tab-button href="profiel">
           <ion-icon name="id-card"></ion-icon>
           <ion-label>Profiel</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="logout()">
+          <ion-icon name="log-out"></ion-icon>
+          <ion-label>Log uit</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content>
-  <ion-view id="userMessagesView" cache-view="false" >
-    <div class="loader-center" ng-if="!doneLoading">
-        <div class="loader">
-          <i class="icon ion-loading-c"></i>
-        </div>
-    </div> -->
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let message of messages | async">
+      <ion-col size="9" [offset]="message.myMsg ? 3 : 0"
+      [ngClass]="{ 'my-message': message.myMsg, 'other-message': !message.myMsg }">
+      <b>{{ message.fromName }}</b><br>
+      <span>{{ message.msg }}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
 
-  <ion-content has-bouncing="true" class="has-header has-footer" 
-      delegate-handle="userMessageScroll">
-    
-      <div ng-repeat="message in messages" class="message-wrapper"
-          on-hold="onMessageHold($event, $index, message)">
-
-        <div ng-if="user._id !== message.userId">
-          <img ng-click="viewProfile(message)" class="profile-pic left" 
-                ng-src="{{toUser.pic}}" onerror="onProfilePicError(this)" />
-          <div class="chat-bubble left">
-            <div class="message" ng-bind-html="message.text | nl2br" autolinker></div>
-            <div class="message-detail">
-                <span ng-click="viewProfile(message)" 
-                    class="bold">{{toUser.username}}</span>,
-                <span am-time-ago="message.date"></span>
-            </div>
-          </div>
-        </div>
-
-        <div ng-if="user._id === message.userId">
-          <img ng-click="viewProfile(message)" class="profile-pic right" 
-            ng-src="{{user.pic}}" onerror="onProfilePicError(this)" />
-          
-          <div class="chat-bubble right">
-            <div class="message" ng-bind-html="message.text | nl2br" autolinker></div>
-            <div class="message-detail">
-                <span ng-click="viewProfile(message)" 
-                    class="bold">{{user.username}}</span>, 
-                <span am-time-ago="message.date"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cf"></div>
-      </div>
-  </ion-content>
-
-  <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
-      <ion-footer class="bar-stable item-input-inset message-footer" keyboard-attach>
-          <label class="item-input-wrapper">
-              <textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
-          </label>
-          <div class="footer-btn-wrap">
-            <button class="button button-icon icon ion-android-send footer-btn" type="submit"
-                ng-disabled="!input.message || input.message === ''">
-            </button>
-          </div>
-      </ion-footer>
-  </form>
-  
-<!-- </ion-view> -->
-  <textarea msd-elastic ng-model="foo">
-    ...
-  </textarea>
-
-
-  <!-- <ion-card>
-    <ion-card-header class="header ion-padding">
-      <div class="info">
-        <ion-icon name="chevron-back" routerLink="../home"></ion-icon>
-        <ion-avatar>
-          <img src="https://i.pravatar.cc/243" />
-        </ion-avatar>
-        <span class="details">
-          <ion-card-title id="username">Ik, de zieke patient</ion-card-title>
-          <ion-card-subtitle id="status">online</ion-card-subtitle>
-        </span>
-      </div>
-      <div class="icoontjes">
-        <ion-icon name="videocam-outline"></ion-icon>
-        <ion-icon name="call-outline"></ion-icon>
-      </div>
-    </ion-card-header>
-    <ion-card-content class="conversation ion-padding">
-      <div class="chat-section" id="chat">
-        <div class="chat">
-          <div class="my messages">
-            <div class="message">
-              Dokter, als ik met mijn vinger hier druk doet het zeer
-            </div>
-            <div class="message">
-              en als ik met mijn vinger daar druk doet het ook zeer...
-            </div>
-            <div class="message last">
-              Overal doet het zeer
-            </div> 
-            <span>
-              <ion-icon name="checkmark-done"></ion-icon> 09:44am
-            </span>
-          </div>
-          <div class="doctor messages">
-            <div class="message doc">
-              Ow ik zie het al
-            </div>
-            <div class="message-last-doc">
-              <ion-avatar>
-                <img src="https://i.pravatar.cc/242" />
-              </ion-avatar>
-              <div class="message last">
-                U heeft een gebroken vinger!
-              </div>
-            </div>
-            <span>
-              <ion-icon name="checkmark-done"></ion-icon> 09:48am
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="message-input">
-        <ion-input placeholder="Type your message here..."></ion-input>
-        <div class="sendMessage">
-          <ion-icon name="send-sharp"></ion-icon>
-        </div>
-      </div>
-    </ion-card-content>
-  </ion-card> -->
-<!-- </ion-content> -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <ion-textarea autoGrow="true" class="message-input" [(ngModel)]="newMsg"></ion-textarea>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button expand="block" fill="clear" color="primary" [disabled]="newMsg === ''"
+        class="msg-btn" (click)="sendMessage()">
+          <ion-icon slot="icon-only" name="send"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>  
+  </ion-toolbar>
+</ion-footer>

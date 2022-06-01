@@ -1,55 +1,26 @@
 <ion-content fullscreen>
   <div class="flex-center">
     <ion-card>
-      <form>    
-        <ion-item lines="full">
+      <form [formGroup]="credentials" (ngSubmit)="login()">
+        <ion-item fill="solid" lines="full">
           <ion-label position="floating">Email</ion-label>
-          <ion-input type="text" #email required></ion-input>
+          <ion-input type="email" formControlName="email"></ion-input>
+          <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is fout</ion-note>
         </ion-item> 
-        <ion-item lines="full">
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" #password required></ion-input>
+        <ion-item fill="solid" lines="full">
+          <ion-label position="floating">Paswoord</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+          <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Paswoord moet op z'n minst 6 karakters bevatten.</ion-note>
         </ion-item>
-        <ion-row>
-          <ion-col> 
-          <ion-button type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-button
-              type="submit"
-              color="danger"
-              (click)="authService.GoogleAuth()"
-              expand="block"
-            >
-              Login with Google
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </form>
-
-      <!-- <ion-card-header>
-        <ion-card-title color="secondary">NHZ-Login</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-label position="floating">Email:</ion-label>
-          <ion-input type="email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Paswoord:</ion-label>
-          <ion-input type="password"></ion-input>
-        </ion-item>
+        <ion-button type="submit" expand="full" [disabled]="!credentials.valid">Login</ion-button>
         <ion-button color="dark" fill="clear" size="full" href="forgot-pw">paswoord vergeten?</ion-button>
-        <ion-button expand="block" color="secondary" shape="round" href="home">Login</ion-button>
-        <ion-button expand="block" fill="clear" shape="round" href="register">Registreren</ion-button>
-      </ion-card-content> -->
+        <ion-button type="button" expand="full" (click)="register()">Registreren</ion-button>
+      </form>
     </ion-card>
   </div>
 </ion-content>
 <ion-footer >
   <ion-toolbar >
-    <ion-button class="emergency" color="danger" expand="block" href="emergency">SPOED</ion-button>
+    <ion-button [routerLink]="['/emergency']" class="emergency" color="danger" expand="block">SPOED</ion-button>
   </ion-toolbar>
 </ion-footer>
