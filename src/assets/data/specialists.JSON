@@ -1,0 +1,16 @@
+{
+  "specialists": [
+            { "name": "KNO-arts - Dr. Jakyll" },
+            { "name": "Gynaecoloog - Mr. Hyde" },
+            { "name": "Eerstehulp medewerker 1 - Mr. Ongelukje" },
+            { "name": "Eerstehulp medewerker 2 - Mevr. Breekebeen" },
+            { "name": "Diëtist - Dr. Spillebeen" },
+            { "name": "Maag-darm-leverarts - Mevr. Drinkalot" },
+            { "name": "Kaakchirurg - Mr. Cariës" },
+            { "name": "Hand-ergotherapeut - Mevr. Knokkels" },
+            { "name": "Radioloog - Dr. Deejay" },
+            { "name": "Fysiotherapeut - Dr. Knedemans" },
+      { "name": "Uroloog 1 - Mr. Viagra" },
+      { "name": "Uroloog 2 - Mevr. Loslippig" }
+  ]
+}

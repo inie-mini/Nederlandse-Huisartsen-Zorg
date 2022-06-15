@@ -13,9 +13,9 @@ ion-content{
     font-size: 20px;
   }
 
-  #showMaps{
+  #showMap{
     width: 100%;
-    height: 600px;
+    height: 350px;
     display: none;
     // padding: 10px;
   }
@@ -31,8 +31,8 @@ ion-content{
   #googleMaps {
     margin: 0 auto;
     width: 100%;
-    // display: none;
-    height: 90%;
+    height: 100px;
+    // height: 90%;
   }
 }
 ion-footer{

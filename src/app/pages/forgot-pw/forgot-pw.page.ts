@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+
 
 @Component({
   selector: 'app-forgot-pw',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotPwPage implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+  }
+  
+  async resetPW(email){
+    await this.authService.resetPassword(email);
   }
 
 }

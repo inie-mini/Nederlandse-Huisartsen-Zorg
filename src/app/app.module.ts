@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 //import { AuthService } from './services/auth.service';
 import { AuthService } from 'ionic-appauth';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 //@Injectable({ providedIn: 'root' })
 
@@ -33,7 +34,8 @@ import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
     provideFirestore(() => getFirestore()),
     AngularFireModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    IonicSelectableModule
   ],
   //providers: [ Geolocation, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, AuthService],
   providers: [ Geolocation, { provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig }, AuthService],

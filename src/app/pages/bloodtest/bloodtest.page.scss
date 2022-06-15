@@ -1,4 +1,4 @@
-form{
+form {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -7,24 +7,31 @@ form{
   justify-content: center;
 }
 
-ion-item{
+ion-item {
   border-radius: 20px;
-  font-size: 13px;
-  margin-block-start: 10px;
+  font-size: 10px;
+  margin-block-start: 5px;
   margin-block-end: 5px;
 }
 
-.buttons{
+ion-select-option {
+  white-space: pre-wrap;
+  font-size: 10px;
+  --color: red;
+}
+
+.buttons {
   display: inline-flex;
   justify-content: space-around;
   margin-block-start: 20px;
-  ion-button{
+
+  ion-button {
     width: 135px;
   }
 }
 
-ion-footer{
+ion-footer {
   position: fixed;
   bottom: 0;
   height: 50px;
-} 
+}

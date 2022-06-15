@@ -57,9 +57,13 @@
           Ik ben niet op een adres, ga naar de locatie van dit apparaat.
         </ion-button>
       </form>
-      <div id="showMaps">
-        <div id="mapText">Er is hulp onderweg, blijf waar u bent. Uw locatie: {{data}}</div>
-        <div #map id="googleMaps"></div>
+      <div id="showMap">
+        <capacitor-google-map id="map">
+          <div id="mapText"></div>
+          <img src="../../../../assets/img/googleMaps.JPG" alt="">
+      </capacitor-google-map>
+        <!-- <div id="mapText"></div>
+        <div #map id="mapArea"></div> -->
       </div>
     </ion-card-content>
     <ion-button (click)="logout()" expand="block" fill="clear" shape="round">Terug naar login</ion-button>

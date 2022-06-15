@@ -13,7 +13,8 @@
           <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Paswoord moet op z'n minst 6 karakters bevatten.</ion-note>
         </ion-item>
         <ion-button type="submit" expand="full" [disabled]="!credentials.valid">Login</ion-button>
-        <ion-button color="dark" fill="clear" size="full" href="forgot-pw">paswoord vergeten?</ion-button>
+        <!-- <ion-button color="dark" fill="clear" size="full" href="forgot-pw">paswoord vergeten?</ion-button> -->
+        <ion-button color="dark" fill="clear" size="full" (click)="resetPW(email)">paswoord vergeten?</ion-button>
         <ion-button type="button" expand="full" (click)="register()">Registreren</ion-button>
       </form>
     </ion-card>

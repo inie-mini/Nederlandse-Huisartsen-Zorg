@@ -70,6 +70,10 @@ export class LoginPage implements OnInit {
     }
   }
 
+  async resetPW(email){
+    await this.authService.resetPassword(email);
+  }
+
   async showAlert(header,message){
     const alert = await this.alertCtrl.create({
       header,

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -12,8 +13,10 @@ import { ReferralPage } from './referral.page';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    ReferralPageRoutingModule
+    ReferralPageRoutingModule,
+    IonicSelectableModule
   ],
   declarations: [ReferralPage]
 })
