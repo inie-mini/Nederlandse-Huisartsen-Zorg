@@ -41,6 +41,7 @@ export class LoginPage implements OnInit {
     console.clear();
     this.authService.logout();
     this.menuCtrl.enable(false);
+    document.getElementById('melding').innerText = '';
   }
 
   async register() {
@@ -73,12 +74,14 @@ export class LoginPage implements OnInit {
 
   async resetPW() {
     const email = this.credentials.value;
+    const melding = document.getElementById('melding');
     try {
       await this.authService.resetPassword(email);
-      console.log('email has been send.');
+      melding.innerText = 'Paswoord reset email is verzonden, kijk in uw inbox voor verdere instructies.'; 
     } catch (e) {
-        console.log(e);
-        alert('Foutief of niet bestaand emailadres.');
+      console.log(e);
+      this.showAlert('Reset is mislukt', 'Foutief of niet bestaand emailadres.')
+      melding.innerText = 'Foutief of niet bestaand emailadres.';
     }
   }
 
