@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import * as firebase from 'firebase/compat';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,9 @@ export class AuthService {
     private auth: Auth,
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore
-  ){}
+  ) { }
 
-  async register({ email, password}) {
+  async register({ email, password }) {
     try {
       const user = await createUserWithEmailAndPassword(
         this.auth,
@@ -24,14 +25,14 @@ export class AuthService {
       );
       const uid = user.user.uid;
       return this.afs.doc(
-             `users/${uid}`
-           ).set({ uid, email: user.user.email});
-    } catch(e) {
+        `users/${uid}`
+      ).set({ uid, email: user.user.email });
+    } catch (e) {
       return null;
     }
   }
 
-  async signIn({ email, password}) {
+  async signIn({ email, password }) {
     try {
       const user = await signInWithEmailAndPassword(
         this.auth,
@@ -39,13 +40,17 @@ export class AuthService {
         password
       );
       return user;
-    } catch(e) {
+    } catch (e) {
       return null;
     }
   }
 
-  resetPassword({email}){
-    return this.afAuth.sendPasswordResetEmail(email);
+  resetPassword({ email }) {
+    try {
+      return this.afAuth.sendPasswordResetEmail(email);
+    } catch {
+      alert("not reset");
+    }
   }
 
   async logout() {

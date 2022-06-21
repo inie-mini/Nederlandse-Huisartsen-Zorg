@@ -14,8 +14,8 @@ export class ForgotPwPage implements OnInit {
   ngOnInit() {
   }
   
-  async resetPW(email){
-    await this.authService.resetPassword(email);
-  }
+  // async resetPW(){
+  //   await this.authService.resetPassword(email);
+  // }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController, MenuController } from '@ionic/angular';
+import { checkActionCode } from 'firebase/auth';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 
 export class LoginPage implements OnInit {
   credentials: FormGroup;
-  
+
   constructor(
     private fb: FormBuilder,
     private loadingCtrl: LoadingController,
@@ -20,8 +21,8 @@ export class LoginPage implements OnInit {
     private authService: AuthService,
     private router: Router,
     private menuCtrl: MenuController,
-  ) {}
-    
+  ) { }
+
   get email() {
     return this.credentials.get('email');
   }
@@ -29,14 +30,14 @@ export class LoginPage implements OnInit {
     return this.credentials.get('password');
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.credentials = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
-  ionViewDidEnter(){
+  ionViewDidEnter() {
     console.clear();
     this.authService.logout();
     this.menuCtrl.enable(false);
@@ -55,7 +56,7 @@ export class LoginPage implements OnInit {
     }
     );
   }
-  
+
   async login() {
     const loading = await this.loadingCtrl.create();
     await loading.present();
@@ -70,17 +71,24 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async resetPW(email){
-    await this.authService.resetPassword(email);
+  async resetPW() {
+    const email = this.credentials.value;
+    try {
+      await this.authService.resetPassword(email);
+      console.log('email has been send.');
+    } catch (e) {
+        console.log(e);
+        alert('Foutief of niet bestaand emailadres.');
+    }
   }
 
-  async showAlert(header,message){
+  async showAlert(header, message) {
     const alert = await this.alertCtrl.create({
       header,
       message,
-      buttons:['OK']
+      buttons: ['OK']
     });
     await alert.present();
   }
-}  
+}
 
