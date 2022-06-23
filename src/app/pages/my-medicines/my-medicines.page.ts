@@ -11,7 +11,7 @@ export class MyMedicinesPage implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
   ) { }
 
   async logout() {
