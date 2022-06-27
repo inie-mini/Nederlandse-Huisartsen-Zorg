@@ -74,7 +74,6 @@ export class NotMobilePage implements OnInit {
       showMap.style.display = 'block';
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-        //mapText.innerHTML = "Hoi";
       } else { 
         mapText.innerHTML = "Geolocation is not supported by this browser.";
       }
@@ -83,45 +82,9 @@ export class NotMobilePage implements OnInit {
         const long = position.coords.longitude;
         mapText.innerHTML = "Latitude: " + lati + 
         "<br>Longitude: " + long;
-
-        // ref: HTMLElement
-        // mapText.innerHTML = "Latitude: " + lati + 
-        // "<br>Longitude: " + long;
-        // this.map = GoogleMap.create({
-        //   id: 'my-map',
-        //   apiKey: 'AIzaSyBcel0WttEsIrLbgJ4VsoJJVoVP97q7llg',
-        //   element: ref,
-        //   config: {
-        //     center: {
-        //       lat: lati, 
-        //       lng: long,
-        //     },
-        //   zoom: 12,
-        //   },
-        //   forceCreate: true,
-        // });
       }
     }
-  }
-
-  // function getLocation() 
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(showPosition);
-  //   } else { 
-  //     this.mapText.innerHTML = "Geolocation is not supported by this browser.";
-  //   }
-  // }
-  // function showPosition(position) {
-  //   this.mapText.innerHTML = "Latitude: " + position.coords.latitude + 
-  //   "<br>Longitude: " + position.coords.longitude;
-  // }
-
- 
-  
-
-    //   alert('Ik krijg de billing niet goed ingesteld op mijn google acount, terwijl mijn paypal wel goed is gekoppeld. GoogleMaps wordt wel geactiveerd en laten zien onderaan deze pagina op basis van latitude en longitude. mvg Raymond');
-    // }
-   
+  }   
   
   onSubmit() {
     const straatnaam = this.formData.value['streetName'];
